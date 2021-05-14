@@ -1,6 +1,6 @@
 <?php
 
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
 require_once (dirname(__FILE__,2). '\\src\\config\\config.php');
 
 // echo $_SERVER['REQUEST_URI'];
@@ -13,7 +13,7 @@ $uri = urldecode(
 // echo $uri;
 // echo substr($uri, 1);
 if($uri == '/' || $uri == '' || $uri == "\\index.php"){
-    $uri = "\\login.php";
+    $uri = "\\day_records.php";
 }
 
 require_once(CONTROLLER_PATH."\\{$uri}");
