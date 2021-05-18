@@ -12,7 +12,7 @@ class Database{
         return $conn;
     }
 
-    public static function getResultFromQuery($sql){
+    public static function getResultFromQuery($sql) {
         $conn = self::getConnection();
         $result = $conn->query($sql);
         $conn->close();
